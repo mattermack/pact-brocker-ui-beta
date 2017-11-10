@@ -1,0 +1,259 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Pacts</title>
+    <link href="http://your-broker-url.com/images/favicon.ico" rel="shortcut icon"
+          type="image/x-icon"/>
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+        .floating-card {
+            float: left;
+            margin: 5px;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="pull-right">
+        <a href="http://your-broker-url.com/hal-browser/browser.html">
+            HAL Browser
+        </a>
+    </div>
+    <h1 class="page-header">
+        Pacts
+    </h1>
+    <div>
+        <div style="margin: 5px;" class="pull-right">
+            <input type="text" class="form-control" id="participant-form" style="width: 300px; display: inline;" />
+            <button type="button" id="participant" class="btn btn-link"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <button type="button" id="clear-search" class="btn btn-link"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <div style="clear: both;">
+        <div class="card floating-card">
+            <div class="card-block">
+                <h3 class="card-title"><a
+                        href="http://your-broker-url.com/groups/MockConsumer">
+                    JS Front End Consumer
+                </a></h3>
+                <h6 class="card-subtitle mb-2 text-muted"><a
+                        href="http://your-broker-url.com/groups/MockProviderApi">
+                    Catalogue Api
+                </a></h6>
+                <a class="card-link"
+                   href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                   title="View pact"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                <a class="card-link"
+                   href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer">Create
+                    Webhook</a>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 12 days ago</small>
+            </div>
+        </div>
+        <div class="card floating-card">
+            <div class="card-block">
+                <h3 class="card-title"><a
+                        href="http://your-broker-url.com/groups/MockConsumer">
+                    JS Front End Consumer
+                </a></h3>
+                <h6 class="card-subtitle mb-2 text-muted"><a
+                        href="http://your-broker-url.com/groups/MockProviderApi">
+                    Orders Api
+                </a></h6>
+
+                <a class="card-link"
+                   href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                   title="View pact"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                <a class="card-link"
+                   href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer">Create
+				   Webhook</a>
+
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last Verified 3 mins ago</small>
+            </div>
+        </div>
+
+        <div class="card floating-card">
+            <div class="card-block">
+                <h3 class="card-title"><a
+                        href="http://your-broker-url.com/groups/MockConsumer">
+                    Orders Api
+                </a></h3>
+                <h6 class="card-subtitle mb-2 text-muted"><a
+                        href="http://your-broker-url.com/groups/MockProviderApi">
+                    Cart Api
+                </a></h6>
+                <a class="card-link"
+                   href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                   title="View pact"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                <a class="card-link"
+					href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer">Create
+                    Webhook</a>
+
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+
+        <div class="card floating-card">
+            <div class="card-block">
+                <h3 class="card-title"><a
+                        href="http://your-broker-url.com/groups/MockConsumer">
+                    Orders Api
+                </a></h3>
+                <h6 class="card-subtitle mb-2 text-muted"><a
+                        href="http://your-broker-url.com/groups/MockProviderApi">
+                    Shipping Api
+                </a></h6>
+                <a class="card-link"
+                   href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                   title="View pact"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                <a class="card-link"
+                   href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer">Create
+                    Webhook</a>
+
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 7 minutes ago</small>
+            </div>
+        </div>
+        <div class="card floating-card">
+            <div class="card-block">
+                <h3 class="card-title"><a
+                        href="http://your-broker-url.com/groups/MockConsumer">
+                    Orders Api
+                </a></h3>
+                <h6 class="card-subtitle mb-2 text-muted"><a
+                        href="http://your-broker-url.com/groups/MockProviderApi">
+                    Account Api
+                </a></h6>
+                <a class="card-link"
+                   href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                   title="View pact"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                <a class="card-link"
+                   href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer">Create
+                    Webhook</a>
+
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 13 minutes ago</small>
+            </div>
+        </div>
+        <div class="card floating-card">
+            <div class="card-block">
+                <h3 class="card-title"><a
+                        href="http://your-broker-url.com/groups/MockConsumer">
+                    Shipping Api
+                </a></h3>
+                <h6 class="card-subtitle mb-2 text-muted"><a
+                        href="http://your-broker-url.com/groups/MockProviderApi">
+                    Payment Queue
+                </a></h6>
+                <a class="card-link"
+                   href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                   title="View pact"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                <a class="card-link"
+                   href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer">Create
+                    Webhook</a>
+
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 13 minutes ago</small>
+            </div>
+        </div>
+        <div class="card floating-card">
+            <div class="card-block">
+                <h3 class="card-title"><a
+                        href="http://your-broker-url.com/groups/MockConsumer">
+                    Orders Api
+                </a></h3>
+                <h6 class="card-subtitle mb-2 text-muted"><a
+                        href="http://your-broker-url.com/groups/MockProviderApi">
+                    Payment Queue
+                </a></h6>
+                <a class="card-link"
+                   href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                   title="View pact"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                <a class="card-link"
+                   href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer">Create
+                    Webhook</a>
+
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 44 minutes ago</small>
+            </div>
+        </div>
+        <div class="card floating-card">
+            <div class="card-block">
+                <h3 class="card-title"><a
+                        href="http://your-broker-url.com/groups/MockConsumer">
+                    JS Front End
+                </a></h3>
+                <h6 class="card-subtitle mb-2 text-muted"><a
+                        href="http://your-broker-url.com/groups/MockProviderApi">
+                    Login Api
+                </a></h6>
+                <a class="card-link"
+                   href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                   title="View pact"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                <a class="card-link"
+                   href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer">Create
+                    Webhook</a>
+
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 12 minutes ago</small>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;" class="pull-right">
+        Total of 8 pacts
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#participant').click(function () {
+                var searchCriteria = $('#participant-form').val();
+                var cards = $.find('.card');
+                $.each(cards, function () {
+                    $(this).hide();
+                });
+
+                var toShow = $.find(".card-block :contains('" + searchCriteria + "')");
+
+                $.each(toShow, function () {
+                    $(this).closest('.card').show();
+                });
+            });
+            $('#clear-search').click(function () {
+                var cards = $.find('.card');
+                $.each(cards, function () {
+                    $(this).show();
+                });
+				 $('#participant-form').val('');
+            });
+        });
+    </script>
+</body>
+</html>

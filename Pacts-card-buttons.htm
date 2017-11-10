@@ -1,0 +1,467 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Pacts</title>
+    <link href="http://your-broker-url.com/images/favicon.ico" rel="shortcut icon"
+          type="image/x-icon"/>
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+        .floating-card {
+            float: left;
+            margin: 5px;
+            width: 350px;
+        }
+
+        .tag-div {
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: .25rem;
+            margin: 0 4px 0 4px;
+            cursor: pointer;
+        }
+
+        .clear-padding {
+            padding: 0;
+        }
+
+        .btn {
+            border-radius: 0;
+        }
+
+        .btn-secondary {
+            border: 0 solid black;
+        }
+        .modal-dialog {
+            max-width: 600px
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="pull-right">
+        <a href="http://your-broker-url.com/hal-browser/browser.html">
+            HAL Browser
+        </a>
+    </div>
+    <h1 class="page-header">
+        Pacts
+    </h1>
+    <div>
+        <div style="margin: 5px;" class="pull-right">
+            <input type="text" class="form-control" id="participant-form" style="width: 276px; display: inline;"/>
+            <button type="button" id="participant" class="btn btn-link"><i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <button type="button" id="clear-search" class="btn btn-link"><i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <div style="clear: both;">
+        <div class="card floating-card">
+            <div class="card-block">
+                <div class="pull-left">
+                    <h3 class="card-title"><a
+                            href="http://your-broker-url.com/groups/MockConsumer">
+                        JS Front End
+                    </a></h3>
+                    <h6 class="card-subtitle mb-2 text-muted"><a
+                            href="http://your-broker-url.com/groups/MockProviderApi">
+                        Catalogue Api
+                    </a></h6>
+                    <small class="text-muted">Last updated 45 minutes ago</small>
+                </div>
+                <div class="pull-right" >
+                    <a class="card-link"
+                       href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                       title="View pact"><i class="fa fa-file-text-o" style="padding: 2px;" aria-hidden="true"></i></a>
+                    <br/>
+                    <a class="card-link"
+                       href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer"
+                       title="View Webhook"><i class="fa fa-exchange" style="padding: 2px;" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="card-footer clear-padding">
+                <div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-secondary display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 mins ago">Prod</button>
+                    <button type="button" class="btn btn-secondary display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 days ago">Head</button>
+
+                    <div class="btn-group btn-block" role="group">
+                        <button id="btnGroupDrop18" type="button" class="btn btn-secondary dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tags
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="btnGroupDrop18">
+                            <a class="dropdown-item display-modal text-danger" href="#">1.0.3</a>
+                            <a class="dropdown-item display-modal" href="#">1.0.7</a>
+                            <a class="dropdown-item display-modal" href="#">2.0.5</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card  floating-card">
+            <div class="card-block">
+                <div class="pull-left">
+                    <h3 class="card-title"><a
+                            href="http://your-broker-url.com/groups/MockConsumer">
+                        JS Front End
+                    </a></h3>
+                    <h6 class="card-subtitle mb-2 text-muted"><a
+                            href="http://your-broker-url.com/groups/MockProviderApi">
+                        Orders Api
+                    </a></h6>
+                    <small class="text-muted">Last updated 33 minutes ago</small>
+                </div>
+                <div class="pull-right">
+                    <a class="card-link"
+                       href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                       title="View pact"><i class="fa fa-file-text-o" style="padding: 2px;" aria-hidden="true"></i></a>
+                    <br/>
+                    <a class="card-link"
+                       href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer"
+                       title="View Webhook"><i class="fa fa-exchange" style="padding: 2px;" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="card-footer clear-padding">
+                <div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown">
+                    <div class="btn-group btn-block" role="group">
+                        <button id="btnGroupDrop17" type="button" class="btn btn-secondary dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tags
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="btnGroupDrop17">
+                            <a class="dropdown-item text-danger display-modal" href="#">1.0.3</a>
+                            <a class="dropdown-item display-modal" href="#">1.0.7</a>
+                            <a class="dropdown-item display-modal" href="#">2.0.5</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card floating-card">
+            <div class="card-block">
+                <div class="pull-left">
+                    <h3 class="card-title"><a
+                            href="http://your-broker-url.com/groups/MockConsumer">
+                        Orders Api
+                    </a></h3>
+                    <h6 class="card-subtitle mb-2 text-muted"><a
+                            href="http://your-broker-url.com/groups/MockProviderApi">
+                        Cart Api
+                    </a></h6>
+                    <small class="text-muted">Last updated 1 minute ago</small>
+                </div>
+                <div class="pull-right">
+                    <a class="card-link"
+                       href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                       title="View pact"><i class="fa fa-file-text-o" style="padding: 2px;" aria-hidden="true"></i></a>
+                    <br/>
+                    <a class="card-link"
+                       href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer"
+                       title="View Webhook"><i class="fa fa-exchange" style="padding: 2px;" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="card-footer clear-padding">
+                <div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-secondary display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 mins ago">Prod</button>
+                    <button type="button" class="btn btn-secondary display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 days ago">Head</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card floating-card">
+            <div class="card-block">
+                <div class="pull-left">
+                    <h3 class="card-title"><a
+                            href="http://your-broker-url.com/groups/MockConsumer">
+                        Orders Api
+                    </a></h3>
+                    <h6 class="card-subtitle mb-2 text-muted"><a
+                            href="http://your-broker-url.com/groups/MockProviderApi">
+                        Shipping Api
+                    </a></h6>
+                    <small class="text-muted">Last updated 17 days ago</small>
+                </div>
+                <div class="pull-right">
+                    <a class="card-link"
+                       href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                       title="View pact"><i class="fa fa-file-text-o" style="padding: 2px;" aria-hidden="true"></i></a>
+                    <br/>
+                    <a class="card-link text-warning"
+                       href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer"
+                       title="Webhook Not Run"><i class="fa fa-exchange" style="padding: 2px;" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="card-footer clear-padding">
+                <div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-secondary display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 mins ago">Prod</button>
+                    <button type="button" class="btn btn-danger display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 days ago">Head</button>
+
+                    <div class="btn-group btn-block" role="group">
+                        <button id="btnGroupDrop12" type="button" class="btn btn-secondary dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tags
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="btnGroupDrop12">
+                            <a class="dropdown-item display-modal" href="#">8.1.2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card floating-card">
+            <div class="card-block">
+                <div class="pull-left">
+                    <h3 class="card-title"><a
+                            href="http://your-broker-url.com/groups/MockConsumer">
+                        Orders Api
+                    </a></h3>
+                    <h6 class="card-subtitle mb-2 text-muted"><a
+                            href="http://your-broker-url.com/groups/MockProviderApi">
+                        Account Api
+                    </a></h6>
+                    <small class="text-muted">Last updated 17 days ago</small>
+                </div>
+                <div class="pull-right">
+                    <a class="card-link"
+                       href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                       title="View pact"><i class="fa fa-file-text-o" style="padding: 2px;" aria-hidden="true"></i></a>
+                    <br/>
+                    <a class="card-link"
+                       href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer"
+                       title="View Webhook"><i class="fa fa-exchange" style="padding: 2px;" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="card-footer clear-padding">
+                <div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-secondary display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 days ago">Head</button>
+                </div>
+            </div>
+        </div>
+        <div class="card floating-card">
+            <div class="card-block">
+                <div class="pull-left">
+                    <h3 class="card-title"><a
+                            href="http://your-broker-url.com/groups/MockConsumer">
+                        Shipping Api
+                    </a></h3>
+                    <h6 class="card-subtitle mb-2 text-muted"><a
+                            href="http://your-broker-url.com/groups/MockProviderApi">
+                        Payment Queue
+                    </a></h6>
+                    <small class="text-muted">Last updated 12 days ago</small>
+                </div>
+                <div class="pull-right">
+                    <a class="card-link"
+                       href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                       title="View pact"><i class="fa fa-file-text-o" style="padding: 2px;" aria-hidden="true"></i></a>
+                    <br/>
+                    <a class="card-link text-danger"
+                       href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer"
+                       title="Failed Webhook Request"><i class="fa fa-exchange" style="padding: 2px;" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="card-footer clear-padding">
+                <div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-secondary display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 mins ago">Prod</button>
+                    <button type="button" class="btn btn-danger display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 days ago">Head</button>
+
+                    <div class="btn-group btn-block" role="group">
+                        <button id="btnGroupDrop10" type="button" class="btn btn-secondary dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tags
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="btnGroupDrop10">
+                            <a class="dropdown-item display-modal" href="#">8.1.2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card floating-card">
+            <div class="card-block">
+                <div class="pull-left">
+                    <h3 class="card-title"><a
+                            href="http://your-broker-url.com/groups/MockConsumer">
+                        Orders Api
+                    </a></h3>
+                    <h6 class="card-subtitle mb-2 text-muted"><a
+                            href="http://your-broker-url.com/groups/MockProviderApi">
+                        Payment Queue
+                    </a></h6>
+                    <small class="text-muted">Last updated 12 days ago</small>
+                </div>
+                <div class="pull-right">
+                    <a class="card-link"
+                       href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                       title="View pact"><i class="fa fa-file-text-o" style="padding: 2px;" aria-hidden="true"></i></a>
+                    <br/>
+                    <a class="card-link"
+                       href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer"
+                       title="View Webhook"><i class="fa fa-exchange" style="padding: 2px;" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="card-footer clear-padding">
+                <div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-danger display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 mins ago">Prod</button>
+                    <button type="button" class="btn btn-secondary display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 days ago">Head</button>
+
+                    <div class="btn-group btn-block" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tags
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item display-modal" href="#">1.0.2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card floating-card">
+            <div class="card-block">
+                <div class="pull-left">
+                    <h3 class="card-title"><a
+                            href="http://your-broker-url.com/groups/MockConsumer">
+                        JS Front End
+                    </a></h3>
+                    <h6 class="card-subtitle mb-2 text-muted"><a
+                            href="http://your-broker-url.com/groups/MockProviderApi">
+                        Login Api
+                    </a></h6>
+                    <small class="text-muted">Last updated 5 mins ago</small>
+                </div>
+                <div class="pull-right">
+                    <a class="card-link"
+                       href="http://your-broker-url.com/pacts/provider/MockProviderApi/consumer/MockConsumer/latest"
+                       title="View pact"><i class="fa fa-file-text-o" style="padding: 2px;" aria-hidden="true"></i></a>
+                    <br/>
+                    <a class="card-link"
+                       href="http://your-broker-url.com/hal-browser/browser.html#/webhooks/provider/MockProviderApi/consumer/MockConsumer"
+                       title="View Webhook"><i class="fa fa-exchange" style="padding: 2px;" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="card-footer clear-padding">
+                <div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-secondary display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 mins ago">Prod</button>
+                    <button type="button" class="btn btn-secondary display-modal" data-toggle="tooltip" data-placement="right" title="Last verified 30 days ago">Head</button>
+
+                    <div class="btn-group btn-block" role="group">
+                        <button id="btnGroupDrop8" type="button" class="btn btn-secondary dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tags
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="btnGroupDrop8">
+                            <a class="dropdown-item display-modal" href="#">1.0.2</a>
+                            <a class="dropdown-item text-danger display-modal" href="#">1.0.3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;" class="pull-right">
+        Total of 8 pacts
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{Consumer}&lt;-&gt;{Provider} - {Tag}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Consumer Version</th>
+                            <th>Provider Version</th>
+                            <th>Result</th>
+                            <th>Date</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1.2.102</td>
+                            <td>9.9.9</td>
+                            <td class="text-success text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td>13 days ago</td>
+                        </tr>
+                        <tr>
+                            <td>1.2.101</td>
+                            <td>9.9.10</td>
+                            <td class="text-danger text-center"><i class="fa fa-times-circle-o" aria-hidden="true"></i></td>
+                            <td>12 days ago</td>
+                        </tr>
+                        <tr>
+                            <td>1.2.100</td>
+                            <td>9.9.10</td>
+                            <td class="text-success text-center"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td>11 days ago</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#participant').click(function () {
+                var searchCriteria = $('#participant-form').val();
+                var cards = $.find('.card');
+                $.each(cards, function () {
+                    $(this).hide();
+                });
+
+                var toShow = $.find(".card-block :contains('" + searchCriteria + "')");
+
+                $.each(toShow, function () {
+                    $(this).closest('.card').show();
+                });
+            });
+
+            $('#clear-search').click(function () {
+                var cards = $.find('.card');
+                $.each(cards, function () {
+                    $(this).show();
+                });
+                $('#participant-form').val('');
+            });
+
+            $('#participant-form').keypress(function (e) {
+                if (e.which == 13) {
+                    $('#participant').click();
+                    return false;
+                }
+            });
+
+            $('.display-modal').click(function () {
+                $('#myModal').modal('show');
+            });
+
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#myInput').focus()
+            })
+
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        });
+    </script>
+</body>
+</html>
